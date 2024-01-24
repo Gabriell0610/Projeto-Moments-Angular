@@ -1,0 +1,37 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border-bottom: 1px solid #777;
+}
+
+.brand, 
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.brand img {
+    width: 40px;
+    margin-right: 1em;
+}
+
+.brand h2 {
+    transition: .4s;
+}
+
+.brand h2:hover {
+    color: #dec129;
+}
+
+.links {
+    gap: 1rem;
+    list-style: none;
+}
+
+
+
+.activate {
+    color: #dec129; ;
+}

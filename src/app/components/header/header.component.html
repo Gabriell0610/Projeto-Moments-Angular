@@ -1,0 +1,20 @@
+<nav>
+  <a class="brand" routerLink="/">
+    <img src="/assets/moments.png" alt="moments" />
+    <h2>Moments</h2>
+  </a>
+  <ul class="links">
+    <li>
+      <a
+        routerLink="/"
+        routerLinkActive="activate"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a routerLink="/moments/new" routerLinkActive="activate">Moments</a>
+    </li>
+    <li><a routerLink="/about" routerLinkActive="activate">About</a></li>
+  </ul>
+</nav>

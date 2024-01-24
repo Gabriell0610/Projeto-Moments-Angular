@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria;
+    color: #444;
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+    transition: .4s;
+}
+
+a:hover {
+    color: #dec129;
+}
+
+/* FORM */
+form {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: .9rem;
+    margin-bottom: .4rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: .6rem;
+    font-size: 0.8rem;
+}
+
+input[type='submit']  {
+    background-color: #EFEFEF;
+    border: 2px solid transparent;
+    padding: .45rem .5rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: .4s;
+}
+
+input[type='submit']:hover {
+   color: #dec129;
+   border-color:#dec129 ;
+   background-color: transparent;
+}
