@@ -56,3 +56,50 @@ input[type='submit']:hover {
    border-color:#dec129 ;
    background-color: transparent;
 }
+
+.validation-error p {
+    color: #e24e4e;
+    margin-top: .4rem;
+    border-left: 3px solid #e24e4e;
+    padding-left: .4rem;
+}
+
+.edit-btn,
+.remove-btn {
+    border: 1px solid #5c5b5b;
+    padding: .4rem 1rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    background-color: #fff;
+    transition: .4s;
+}
+
+button fa-icon,
+a fa-icon {
+  margin-right: 0.2em;
+}
+
+.edit-btn,
+.edit-btn path {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.edit-btn:hover,
+.edit-btn:hover path {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.remove-btn,
+.remove-btn path {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.remove-btn:hover,
+.remove-btn:hover path {
+  color: #fff;
+  background-color: #dc3545;
+}

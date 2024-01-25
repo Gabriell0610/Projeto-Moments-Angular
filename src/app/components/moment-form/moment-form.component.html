@@ -1,6 +1,7 @@
 <form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
   <div class="form-group">
     <label for="title">Título:</label>
+    <input type="hidden" formControlName="id">
     <input
       type="text"
       placeholder="Digite o Título"

@@ -22,7 +22,7 @@ export class NewMomentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //Essa função tem que ser assíncrona,  pos irá trabalhar com API
+  //Essa função tem que ser assíncrona, pos irá trabalhar com API
   async createHandler(moment: Moment) {
     //Form Data é utilizado para pegar dados do formulários que contem arquivos
     //se fosse só texto poderia ser com JSON

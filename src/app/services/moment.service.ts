@@ -29,4 +29,17 @@ export class MomentService {
     return this.http.get<Response<Moment[]>>(this.apiUrl)
   }
 
+  getDetailsMoment(id: number):Observable<Response<Moment>> {
+    return this.http.get<Response<Moment>>(`${this.apiUrl}/${id}`)
+  }
+
+  removeMoment(id: number) {
+    return this.http.delete(`${this.apiUrl}/${id}`)
+  }
+
+
+  updateMoment(id: number, formData: FormData):Observable<FormData> {
+    return this.http.put<FormData>(`${this.apiUrl}/${id}`, formData)
+  }
+  
 }

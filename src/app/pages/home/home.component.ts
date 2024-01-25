@@ -11,11 +11,15 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent implements OnInit {
 
-  //Todos o mementos
+  //Todos o elementos
   allMoments: Moment[] = []
+  
+  //Moments que está sendo exibido
+  moments: Moment[] = []
 
-  //Array de momentos para busca
-  momentsSearch: Moment[] = []
+  faSearch = faSearch
+  searchTerm: string = ''
+
 
   //Api para pegar os dados
   baseApiUrl = environment.baseApiUrl
@@ -25,20 +29,28 @@ export class HomeComponent implements OnInit {
   constructor(private momentService: MomentService) { }
 
   ngOnInit(): void {
-  this.momentService.getMoments().subscribe((items) => {
-    console.log(items)
-    const data = items.data
+    this.momentService.getMoments().subscribe((items) => {
+      console.log(items.data)
+      //Essa variável armazena todo os dados que estão e em data
+      const data = items.data
 
-    data.map((item) => {
-      item.create_at = new Date(item.create_at!).toLocaleString('pt-BR')
+      //Percorrendo os dados e pegando a propriedade da data para podermos formartar em PT-BR
+      data.map((item) => {
+        item.created_at = new Date(item.created_at!).toLocaleString('pt-BR')
+      })
+
+      //Adicionando os dados dentro das variáveis para preencher os campos no HTML
+      this.allMoments = data
+      this.moments = data
     })
-
-    this.allMoments = data
-    this.momentsSearch = data
-  })
-
-
   }
 
+  search(event: Event):void {
+    const target = event.target as HTMLInputElement
+    const value = target.value
+    this.moments = this.allMoments.filter( moment => {
+      return moment.title.toLowerCase().includes(value)
+    })
+  }
 
 }
